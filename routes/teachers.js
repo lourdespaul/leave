@@ -13,12 +13,11 @@ router.get('/register', function(req, res, next) {
 router.post('/register', function (req,res, next) {
    var data = req.body;
    var teacher = new Teachers({
-       name: data.name,
-       phone: data.phone,
-       salary: data.salary,
-       address: data.address,
-       password: data.password,
-       gender: data.gender
+       name: data.name.trim(),
+       phone: data.phone.trim(),
+       salary: data.salary.trim(),
+       address: data.address.trim(),
+       gender: data.gender.trim()
    });
    if(data.isPrincipal){
        teacher.isPrincipal = data.isPrincipal
