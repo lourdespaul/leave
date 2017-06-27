@@ -70,7 +70,7 @@ router.post('/verify', function (req, res, next) {
                     }
                     if(data.type == 'success'){
                         if(body.password == body.vpassword){
-                            result.password = password;
+                            result.password = body.password;
                             result.save(function(err, slt){
                                 if(slt){
                                     res.redirect('/login');
