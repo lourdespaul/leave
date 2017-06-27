@@ -1,0 +1,39 @@
+
+        <div class="section">
+            <table>
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Session</th>
+                    <th>Reason</th>
+                    <th>Accept</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                {{#each requests}}
+                <tr>
+                    <td>{{teacher.name}}</td>
+                    <td>{{formatTime date "DD-MM-YYYY" }}</td>
+                    <td>{{uppercase session}}</td>
+                    <td>{{reason}}</td>
+                    <td>
+                        {{#if accepted}}
+                            <text>Accepted</text>
+                        {{else}}
+                            {{#if canceled}}
+                                <text>Cancelled</text>
+                            {{else}}
+                                <a href="/principal/accept/{{id}}"><button>Accept</button></a>
+                                <br><br>
+                                <a href="/principal/cancel/{{id}}"><button>Cancel</button></a>
+                            {{/if}}
+                        {{/if}}
+                    </td>
+                </tr>
+                {{/each}}
+                </tbody>
+            </table>
+
+        </div>

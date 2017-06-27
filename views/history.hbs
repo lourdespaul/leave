@@ -1,0 +1,36 @@
+<div class="section">
+    <h3>Total Holidays: {{total}}</h3>
+</div>
+<div class="section">
+    <table>
+        <thead>
+        <tr>
+            <th>Date</th>
+            <th>Session</th>
+            <th>Reason</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {{#each leave}}
+            <tr>
+                <td>{{formatTime date "DD-MM-YYYY" }}</td>
+                <td>{{uppercase session}}</td>
+                <td>{{reason}}</td>
+                <td>
+                    {{#if accepted}}
+                        <text>Accepted</text>
+                    {{else}}
+                        {{#if canceled}}
+                            <text>Cancelled</text>
+                        {{else}}
+                            <text>Not Yet Accepted</text>
+                        {{/if}}
+                    {{/if}}
+                </td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</div>

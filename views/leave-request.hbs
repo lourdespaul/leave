@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="section">
+        <h3 align="center">Apply Leave</h3>
+        <div class="row">
+            <form class="col s12" method="post">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select required name="person">
+                            <option value="principal">Principal</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                        <label>Apply to:</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="date" class="datepicker" name="date">
+                        <label for="date"> Date</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select name="session">
+                            <option value="fn">FN</option>
+                            <option value="an">AN</option>
+                            <option value="fullday">FULL DAY</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select required name="reason">
+                            <option selected disabled>Select a Reason</option>
+                            <option value="function">Function</option>
+                        </select>
+                        <label>Reason:</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <button class="btn-large" type="submit">Send</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
